@@ -11,3 +11,9 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello, World!"
+  lab_taks_echo:
+    needs: say-hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second Job Step
+        run: echo "This is labs echo, running after say - hello"
